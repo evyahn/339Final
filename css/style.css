@@ -98,10 +98,8 @@ div a, #JamMaking {
 
 main {
     background-color: #FFFFFF;
-    padding: 20px;
-    border: 5px solid #3e4059;
-    border-top: 0;
     font-size: 20px;
+    padding: 20px;
 }
 
 h1 {
@@ -174,7 +172,6 @@ a.skip:focus{
 footer {
     background-color: #f5f3e1;
     border: 5px solid #3e4059;
-    border-top: 0px;
     padding: 30px;
 }
 footer p{
