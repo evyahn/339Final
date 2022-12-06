@@ -1,0 +1,264 @@
+/* Imported Playfair Display, the main font for my portfolio */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+/* Animating logo */
+#logo img {
+    height: 60px;
+    width: auto;
+}
+#logo {
+    height: 150px;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+#logo {
+    animation: fadingin;
+    animation-duration: 3s; 
+}  
+@keyframes fadingin {
+    from { opacity: 0;}
+    to { opacity: 1;}
+} 
+
+/* mobile view */
+body {
+    color: #3e4059;
+    background-color: #8bb19c;
+    margin: 3%;
+    font-family: 'Playfair Display', Helvetica, sans-serif;
+}
+
+header {
+    background-color: #f5f3e1;
+    border: 5px solid #3e4059;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li:hover {
+    background-color: #eecf97;
+    box-shadow: 8px 8px 2px 1px #d38066;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px;
+    transform: translateY(-4px);
+}
+
+li.active {
+    border: solid #3e4059;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li a {
+    color: #3e4059;
+}
+
+div a, div p {
+    margin: 20px;
+}
+
+ol {
+    margin: 20px 60px;
+}
+
+ol li {
+    background-color: #eecf97;
+    box-shadow: 8px 8px 2px 1px #d38066;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px;
+}
+
+/* Styling buttons for going to different pages */
+div a, #JamMaking {
+    display: block;
+    color: #3e4059;
+    background-color: #f5f3e1;
+    padding: 5px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+main {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 5px solid #3e4059;
+    border-top: 0;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 12px;
+    border-top: solid 3px #3e4059;
+    margin: 10px;
+}
+
+h3 {
+    text-align: center;
+    padding: 12px;
+}
+
+iframe{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+  }
+
+p {
+    font-size: 18px;
+    margin: 10px;
+    text-align: center;
+    line-height: 20px;
+}
+
+main img{
+    width: 250px;
+    display: block;
+    margin: 20px auto 20px auto;
+    border: 3px solid #fdc67d;
+    padding: 5px;
+}
+
+main img:hover{
+    border: dotted 10px #8bb19c;
+    box-shadow: 8px 8px 2px 1px #d38066;
+    padding: 15px;
+}
+
+/* Skip to main content is hidden until tabbed */
+a.skip {
+    background: #FFFFFF;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+a.skip:focus{
+    top:20px;
+    color: #3e4059;
+}
+
+/* Styling footer */
+footer {
+    background-color: #f5f3e1;
+    border: 5px solid #3e4059;
+    border-top: 0px;
+    padding: 30px;
+}
+footer p{
+    text-align: center;
+}
+
+/* tablet view */
+@media screen and (min-width: 800px){
+    header {
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+
+    #logo {
+        width: 200px;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    nav li {
+        width: 20%;
+    }
+
+    body > header {
+        position: sticky;
+        top: 0;
+    }
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    h2 {
+        background-color: #c8cae3;
+    }
+
+    .slide-image {
+        width: 400px;
+    }
+
+    main img {
+        width: 350px;
+        border: 5px dashed #8bb19c;
+    }
+
+    /* Set up column grid for containers */
+    .about-image, .dessert-image{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        align-content: center;
+        justify-items: center;
+        margin: auto; 
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    iframe {
+        width: 840px;
+        height: 472.5px;
+    }
+
+    h2 {
+        background-color: #f5f3e1;
+    }
+
+    .slide-image {
+        width: 700px;
+    }
+
+    main img {
+        width: 450px;
+        border: 5px solid #8bb19c;
+    }
+}
+
+/* turns off logo animation when enabled */
+@media (prefers-reduced-motion: reduce){
+    #logo {
+        animation: none;
+    }
+}
