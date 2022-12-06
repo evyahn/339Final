@@ -221,7 +221,7 @@ footer p{
 
     main img {
         width: 350px;
-        border: 5px dashed #8bb19c;
+        border: 5px dashed #d38066;
     }
 
     /* Set up column grid for containers */
@@ -251,8 +251,18 @@ footer p{
     }
 
     main img {
-        width: 450px;
+        width: 300px;
         border: 5px solid #8bb19c;
+    }
+
+    .dessert-image{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        align-content: center;
+        justify-items: center;
+        margin: auto; 
+        justify-content: space-evenly;
     }
 }
 
