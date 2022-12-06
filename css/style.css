@@ -96,6 +96,10 @@ div a, #JamMaking {
     text-align: center;
 }
 
+.button {
+    background-color: transparent;
+}
+
 main {
     background-color: #FFFFFF;
     font-size: 20px;
@@ -150,6 +154,45 @@ main img:hover{
     border: dotted 10px #8bb19c;
     box-shadow: 8px 8px 2px 1px #d38066;
     padding: 15px;
+}
+
+/* Creating pop-ups */
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3e4059;
+}
+.popup .close:hover {
+    color: #d38066;
+    border: 1px solid #d38066;
+}
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #f5f3e1;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
 }
 
 /* Skip to main content is hidden until tabbed */
@@ -212,17 +255,12 @@ footer p{
         background-color: #c8cae3;
     }
 
-    .slide-image {
-        width: 400px;
-    }
-
     main img {
-        width: 350px;
         border: 5px dashed #d38066;
     }
 
     /* Set up column grid for containers */
-    .about-image, .dessert-image{
+    .about-image, .dessert-image, .preserve-image{
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto;
@@ -243,16 +281,12 @@ footer p{
         background-color: #f5f3e1;
     }
 
-    .slide-image {
-        width: 700px;
-    }
-
     main img {
         width: 300px;
         border: 5px solid #8bb19c;
     }
 
-    .dessert-image{
+    .dessert-image, .preserve-image{
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto;
